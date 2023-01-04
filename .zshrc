@@ -104,15 +104,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# manage dotefiles
+alias config='/usr/bin/git -c user.email="quangtuan9237@gmail.com" -c user.name="Tuan Duong" --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+#nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export DOCKER_DEFAULT_PLATFORM=linux/arm64
-
 set -o vi
-alias config='/usr/bin/git --git-dir=/Users/tuanduong/.cfg/ --work-tree=/Users/tuanduong'
